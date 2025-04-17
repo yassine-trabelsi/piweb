@@ -1,0 +1,14 @@
+<h2>🧠 Prédiction AVC (Brain Stroke)</h2>
+
+<input type="file" (change)="onFileSelected($event)" accept="image/*">
+<button (click)="submitImage()" [disabled]="!selectedFile">Envoyer</button>
+
+<div *ngIf="imagePreview" class="preview">
+  <h3>Image sélectionnée :</h3>
+  <img [src]="imagePreview" alt="Image sélectionnée" class="preview-img" style="height: 300px;">
+</div>
+
+<div *ngIf="prediction">
+  <h3>Résultat :</h3>
+  <p>{{ prediction }}</p>
+</div>
