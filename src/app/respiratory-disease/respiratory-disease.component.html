@@ -1,0 +1,10 @@
+<h2>🩺 Prédiction Maladies Respiratoires</h2>
+
+<input type="file" (change)="onFileSelected($event)" accept="audio/*">
+<button (click)="submitAudio()" [disabled]="!selectedFile">Envoyer</button>
+
+<div *ngIf="prediction">
+  <h3>Résultat :</h3>
+  <p>Maladie prédite : <strong>{{ prediction }}</strong></p>
+  <p *ngIf="confidence !== null">Confiance : {{ confidence | percent:'1.1-1' }}</p>
+</div>

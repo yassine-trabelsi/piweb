@@ -4,11 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrainStrokeComponent } from './brain-stroke/brain-stroke.component';
+import { RespiratoryDiseaseComponent } from './respiratory-disease/respiratory-disease.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BrainStrokeComponent
+    BrainStrokeComponent,
+    RespiratoryDiseaseComponent
   ],
   imports: [
     BrowserModule,
